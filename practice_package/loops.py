@@ -1,4 +1,5 @@
-def sum_even_digits(number):
+
+def sum_even_digits(number: int) -> int:
     number = abs(number)  # игнорируем знак числа
     total = 0
     for digit in str(number):
@@ -6,7 +7,8 @@ def sum_even_digits(number):
             total += int(digit)
     return total
 
-def count_vowel_triplets(text):
+
+def count_vowel_triplets(text: str) -> int:
     vowels = "aeiouyAEIOUY"
     count = 0
     for i in range(len(text) - 2):
@@ -14,7 +16,8 @@ def count_vowel_triplets(text):
             count += 1
     return count
 
-def find_fibonacci_index(number):
+
+def find_fibonacci_index(number: int) -> int:
     a, b = 0, 1
     index = 1
     while b < number:
@@ -22,7 +25,8 @@ def find_fibonacci_index(number):
         index += 1
     return index if b == number else -1
 
-def remove_duplicates(string):
+
+def remove_duplicates(string: str) -> str:
     if not string:
         return ""
     result = [string[0]]
